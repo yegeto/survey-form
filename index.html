@@ -2,33 +2,35 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create DnD Character</title>
+  <title>Create Codecampia Character</title>
 </head>
 
 <body>
   <main>
     <header>
-      <h1 id="title">Create DnD Character</h1>
-      <p id="description">This page helps to create a new character</p>
+      <h1 id="title">Create Codecampia Character</h1>
+      <p id="description">This page helps to create a new character to the Codecampia world.</p>
     </header>
     <form action="" id="survey-form">
-      <fieldset>
+      <fieldset class="account-field">
         <label for="name" id="name-label">Character Name:
-          <input type="text" id="name" required>
+          <input class="account-input" type="text" id="name" required placeholder="Enter Character Name">
         </label>
         <label for="email" id="email-label">Email Address:
-          <input type="email" id="email" required>
+          <input class="account-input" type="email" id="email" required placeholder="Enter Email Address">
         </label>
         <label for="password" id="password-label">Password:
-          <input type="text" type:password="" id="password" name="password" pattern="[a-z0-5]{8,}" required>
+          <input class="account-input" type="password" id="password" name="password" pattern="[a-z0-5]{8,}" required
+            placeholder="Enter Password">
         </label>
       </fieldset>
-      <fieldset>
+      <fieldset class="character-field">
         <label for="race">
-          <select name="race" id="dropdown">
-            <option value="0">Race...</option>
+          <select class="character-input" name="race" id="dropdown">
+            <option value="0">Select Race...</option>
             <option value="1">Human</option>
             <option value="2">Dragonborn</option>
             <option value="3">Dwarf</option>
@@ -39,7 +41,7 @@
           </select>
         </label>
         <label for="class">
-          <select name="class" id="class">
+          <select class="character-input" name="class" id="class">
             <option value="0">Class...</option>
             <option value="1">Bard</option>
             <option value="2">Cleric</option>
@@ -56,39 +58,52 @@
           </select>
         </label>
         <label for="number" id="number-label">Level:
-          <input type="number" id="number" min="1" max="20" placeholder="Level">
+          <input class="character-input" type="number" id="number" min="1" max="20" placeholder="'1 - 20'">
         </label>
-        <fieldset>
-          <legend>Character Gender</legend>
-          <label for="character-gender">Female 
-            <input type="radio" name="character-gender" id="Female">
+        <fieldset class="gender-field">
+          <legend>Select Character Gender:</legend>
+          <label for="female">
+            <input class="gender-input" type="radio" name="character-gender" id="female"> Female
           </label>
-          <label for="">Male 
-            <input type="radio" name="character-gender" id="Male">
+          <label for="male">
+            <input class="gender-input" type="radio" name="character-gender" id="male"> Male
           </label>
         </fieldset>
       </fieldset>
-      <fieldset>
+      <fieldset class="skill-field">
         <legend>Skills</legend>
-        <label for="">
-          <input type="checkbox" value="1">
+        <label for="athletics">
+          <input id="athletics" type="checkbox" value="athletics"> Athletics
         </label>
-        <label for="">
-          <input type="checkbox"
-            value="2">
-          </label>
-          <label for="">
-            <input type="checkbox" value="3">
-          </label>
-          <label for=""><input
-            type="checkbox" value="4">
-          </label>
-          <label for="">
-            <input type="checkbox" value="5">
-          </label>
-        </fieldset>
-      <fieldset><label for=""><textarea name="" id="" cols="30" rows="10"></textarea></label></fieldset>
-      <input type="submit" value="Submit">
+        <label for="insight">
+          <input id="insight" type="checkbox" value="insight"> Insight
+        </label>
+        <label for="investigation">
+          <input id="investigation" type="checkbox" value="investigation"> Investigation
+        </label>
+        <label for="nature">
+          <input id="nature" type="checkbox" value="nature"> Nature
+        </label>
+        <label for="perception">
+          <input id="perception" type="checkbox" value="perception"> Perception
+        </label>
+        <label for="persuasion">
+          <input id="persuasion" type="checkbox" value="persuasion"> Persuasion
+        </label>
+        <label for="stealth">
+          <input id="stealth" type="checkbox" value="stealth"> Stealth
+        </label>
+        <label for="survival">
+          <input id="survival" type="checkbox" value="survival"> Survival
+        </label>
+      </fieldset>
+      <fieldset class="background-field">
+        <label class="background-field" for="background">Provide character background:
+          <textarea class="background-input" name="background" id="background" cols="30" rows="10"
+            placeholder="Before the war..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit-button" type="submit" value="Submit">
     </form>
   </main>
 

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body::before {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(rgba(134, 167, 137, 0.6), rgba(134, 167, 137, 0.3)), url(background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: rgb(230, 255, 230);
+}
+
+main {
+  width: 60%;
+  max-width: 800px;
+  min-width: 500px;
+  margin: 20px auto;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  background-color: rgba(79, 111, 82, 0.9);
+  padding: 50px 40px 50px;
+  border: none;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+}
+
+input::placeholder {
+  color: rgba(27, 87, 36, 0.6);
+}
+
+.account-input,
+.character-input,
+.background-input {
+  width: 100%;
+  min-height: 2.5em;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0 10px;
+  font-size: 18px;
+  margin: 10px 0 20px;
+  color: rgb(27, 87, 36);
+}
+
+.inline {
+  display: inline;
+  width: auto;
+}
+
+.gender-field,
+.skill-field {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgb(210, 227, 200);
+}
+
+legend,
+.background-field {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.background-field {
+  display: block;
+}
+
+#submit-button {
+  display: block;
+  margin: 30px auto 0;
+  width: 80%;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  border: none;
+  background-color: rgb(111, 72, 82);
+  color: rgb(210, 227, 200);
+  padding: 1rem;
+  font-size: 21px;
+}
